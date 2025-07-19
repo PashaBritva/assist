@@ -1,0 +1,8 @@
+bs4
+fuzzywuzzy
+openai
+pyttsx4
+vosk
+torch
+pyaudio
+silero

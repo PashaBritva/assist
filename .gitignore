@@ -1,0 +1,5 @@
+.venv
+config.yaml
+assistant_memory.json
+model_small
+__pycache__

@@ -1,0 +1,15 @@
+STT:
+  - modelpath: 
+  - samplerate: 
+  - blocksize: 
+  - device:  # id device
+  - channels:
+
+TTS:
+  - device:  # cpu, cude | -> (gpu)
+  - speaker:
+    - aidar
+    - baya
+    - kseniya
+    - xenia
+    - random

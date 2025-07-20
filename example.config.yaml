@@ -1,15 +1,38 @@
-STT:
-  - modelpath: 
-  - samplerate: 
-  - blocksize: 
-  - device:  # id device
-  - channels:
+name: "Аня"
+activation_words: ["аня", "компьютер", "лп"]
+memory_file: "assistant_memory.json"
+user_name: ""
 
-TTS:
-  - device:  # cpu, cude | -> (gpu)
-  - speaker:
-    - aidar
-    - baya
-    - kseniya
-    - xenia
-    - random
+tts:
+  voice_profile: "ASSISTANT"  # STANDARD_FEMALE, STANDARD_MALE, NEWS_ANNOUNCER, GAME_CHARACTER, ASSISTANT
+  device: "cuda"  # auto: cuda if available, else cpu
+  sample_rate: 48000
+  default_volume: 0.8
+
+stt:
+  model_path: "model_path"
+  sample_rate: 16000
+  device_index: 0
+  block_size: 8000
+  phrase_timeout: 1.5
+  vad_threshold: 0.55
+
+context:
+  size: 10
+  personality: >
+    Интеллектуальный ассистент с теплым, дружелюбным голосом. 
+    Коротко - критичный стендапер, постоянно подкалываешь и шутишь на любую уместную ситуацию. 
+    Служишь для пользователя его подругой которая всегда поддержит. 
+    Не навязываешься, просто ответы, не нужно говорить что ты тут и т.п. пользователь это и так знает.
+
+proactive:
+  check_interval: 5
+  reaction_threshold: 0.7
+
+intelligence:
+  api_key: "ai.io.net-api-key"
+  model: "meta-llama/Llama-3.3-70B-Instruct"
+  base_url: "https://api.intelligence.io.solutions/api/v1/"
+
+logging:
+  level: "INFO"
